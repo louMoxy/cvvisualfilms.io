@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
 data-netlify="true"
+>>>>>>> 071e80ed78120ffe7f7488f3c531a26ca99f3180
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['message'])	||
@@ -10,14 +13,18 @@ if(empty($_POST['name'])  		||
    }
 	
 $name = $_POST['name'];
-$email_address = $_POST['email'];
+$email_address = $_POST['email'];  
 $message = $_POST['message'];
+<<<<<<< HEAD
+$to = "ctvanstone@outlook.com";
+=======
 	
 // Create the email and send the message
 $to = "ctvanstone@outlook.com"; 
+>>>>>>> 071e80ed78120ffe7f7488f3c531a26ca99f3180
 $email_subject = "Website Contact Form:  $name";
 $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nMessage:\n$message";
-$headers = "From: noreply@cvvisualfilms.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$headers = "From: noreply@cvvisualfilms.com\n";
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			
